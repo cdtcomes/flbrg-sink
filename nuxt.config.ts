@@ -24,7 +24,6 @@ export default defineNuxtConfig({
     redirectStatusCode: '301',
     linkCacheTtl: 60,
     redirectWithQuery: false,
-    homeURL: '',
     cfAccountId: '',
     cfApiToken: '',
     dataset: 'sink',
@@ -34,6 +33,7 @@ export default defineNuxtConfig({
     listQueryLimit: 500,
     disableBotAccessLog: false,
     public: {
+      homeURL: process.env.NUXT_HOME_URL || '',
       previewMode: '',
       slugDefaultLength: '6',
     },
